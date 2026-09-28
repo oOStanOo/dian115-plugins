@@ -6,7 +6,7 @@
     "name": "oOStanOo 插件仓库",
     "homepage": "https://github.com/oOStanOo/dian115-plugins"
   },
-  "generated_at": "2026-09-28T17:23:21Z",
+  "generated_at": "2026-09-28T17:41:31Z",
   "plugins": [
     {
       "id": "douban115",
@@ -101,54 +101,6 @@
             ],
             "proxy_mode": "system",
             "reason": "读取豆瓣移动页条目信息，并在标题匹配失败时取条目的原名/又名用于重新匹配 TMDB"
-          },
-          {
-            "origin": "http://127.0.0.1:3000",
-            "methods": [
-              "GET"
-            ],
-            "proxy_mode": "direct",
-            "reason": "读取本机 CookieCloud（dian115 内置）中的豆瓣 Cookie；内网地址必须直连，否则会被宿主全局代理拦截"
-          },
-          {
-            "origin": "http://localhost:3000",
-            "methods": [
-              "GET"
-            ],
-            "proxy_mode": "direct",
-            "reason": "读取本机 CookieCloud 中的豆瓣 Cookie（内网直连）"
-          },
-          {
-            "origin": "http://127.0.0.1:8088",
-            "methods": [
-              "GET"
-            ],
-            "proxy_mode": "direct",
-            "reason": "读取本机 CookieCloud Server 默认端口中的豆瓣 Cookie（内网直连）"
-          },
-          {
-            "origin": "http://localhost:8088",
-            "methods": [
-              "GET"
-            ],
-            "proxy_mode": "direct",
-            "reason": "读取本机 CookieCloud Server 默认端口中的豆瓣 Cookie（内网直连）"
-          },
-          {
-            "origin": "http://127.0.0.1:8080",
-            "methods": [
-              "GET"
-            ],
-            "proxy_mode": "direct",
-            "reason": "读取本机 CookieCloud 常见端口中的豆瓣 Cookie（内网直连）"
-          },
-          {
-            "origin": "http://localhost:8080",
-            "methods": [
-              "GET"
-            ],
-            "proxy_mode": "direct",
-            "reason": "读取本机 CookieCloud 常见端口中的豆瓣 Cookie（内网直连）"
           }
         ]
       },
