@@ -6,7 +6,7 @@
     "name": "oOStanOo 插件仓库",
     "homepage": "https://github.com/oOStanOo/dian115-plugins"
   },
-  "generated_at": "2026-09-29T05:29:07Z",
+  "generated_at": "2026-09-29T03:54:47Z",
   "plugins": [
     {
       "id": "douban115",
@@ -108,79 +108,6 @@
         "douban",
         "emby",
         "subscribe",
-        "automation"
-      ]
-    },
-    {
-      "id": "dian115.download-center",
-      "name": "下载中心",
-      "version": "1.0.0",
-      "description": "转移做种、种子重命名、站点标签、做种校验、速度监控、上传限速与 IYUU 辅种。下载器与 PT 站点由用户在配置页填写地址与凭据，插件经宿主 Broker 直连管理。",
-      "author": "z2561221",
-      "homepage": "https://github.com/z2561221/MoviePilot-Plugins",
-      "icon_url": "assets/download-center.svg",
-      "package_url": "https://github.com/oOStanOo/dian115-plugins/releases/download/download-center-v1.0.0/dian115.download-center-1.0.0.d115p",
-      "sha256": "af70ba792fc999bb555599a5cac89cf79880d2e212dff2922300123eb70bb87f",
-      "runtime": {
-        "kind": "wasm",
-        "protocol": "dian115:wasm@1",
-        "autostart": true,
-        "trust_level": "wasm-sandbox"
-      },
-      "permissions": {
-        "apis": [
-          {
-            "method": "GET",
-            "path": "/api/tmdb/search",
-            "reason": "种子重命名时搜索电影/剧集"
-          },
-          {
-            "method": "GET",
-            "path": "/api/tmdb/movie/:id",
-            "reason": "种子重命名时获取电影详情与年份"
-          },
-          {
-            "method": "GET",
-            "path": "/api/tmdb/tv/:id",
-            "reason": "种子重命名时获取剧集详情与季数"
-          },
-          {
-            "method": "POST",
-            "path": "/api/notifications/plugin",
-            "reason": "速度异常、辅种结果、做种校验等结果通知"
-          },
-          {
-            "method": "GET",
-            "path": "/api/plugin-runtime/storage/:key",
-            "reason": "读取插件配置与运行状态"
-          },
-          {
-            "method": "PUT",
-            "path": "/api/plugin-runtime/storage/:key",
-            "reason": "保存插件配置与运行状态"
-          },
-          {
-            "method": "DELETE",
-            "path": "/api/plugin-runtime/storage/:key",
-            "reason": "清理插件状态"
-          }
-        ],
-        "network": [
-          {
-            "origin": "https://2025.iyuu.cn",
-            "methods": [
-              "GET",
-              "POST"
-            ],
-            "proxy_mode": "system",
-            "reason": "IYUU 辅种 API 的站点索引、辅种查询与汇报"
-          }
-        ]
-      },
-      "tags": [
-        "downloader",
-        "pt",
-        "seed",
         "automation"
       ]
     }
