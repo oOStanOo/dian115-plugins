@@ -6,7 +6,7 @@
     "name": "oOStanOo 插件仓库",
     "homepage": "https://github.com/oOStanOo/dian115-plugins"
   },
-  "generated_at": "2026-09-30T01:58:56Z",
+  "generated_at": "2026-09-30T03:48:06Z",
   "plugins": [
     {
       "id": "douban115",
@@ -109,6 +109,94 @@
         "emby",
         "subscribe",
         "automation"
+      ]
+    },
+    {
+      "id": "doc115",
+      "name": "文档资源库",
+      "version": "1.0.0",
+      "description": "导入在线文档（腾讯文档）建立索引，搜索其中的 115 资源并一键转存入库，转存位置沿用 dian115 宿主配置。",
+      "author": "oOStanOo",
+      "homepage": "https://github.com/oOStanOo/dian115-plugins",
+      "icon_url": "assets/doc115.svg",
+      "package_url": "https://github.com/oOStanOo/dian115-plugins/releases/download/v1.0.0/doc115-1.0.0.d115p",
+      "sha256": "20f04ec0f664d61aac93ba29137cfa7f09e22d8f49a9e9259f88e8501d779808",
+      "runtime": {
+        "kind": "wasm",
+        "protocol": "dian115:wasm@1",
+        "autostart": true,
+        "trust_level": "wasm-sandbox"
+      },
+      "permissions": {
+        "apis": [
+          {
+            "method": "GET",
+            "path": "/api/plugin-runtime/storage/:key",
+            "reason": "读取插件配置、登录态与文档索引"
+          },
+          {
+            "method": "PUT",
+            "path": "/api/plugin-runtime/storage/:key",
+            "reason": "保存插件配置、登录态与文档索引"
+          },
+          {
+            "method": "POST",
+            "path": "/api/notifications/plugin",
+            "reason": "推送索引与转存结果通知"
+          },
+          {
+            "method": "GET",
+            "path": "/api/plugin-host/transfers/115/targets",
+            "reason": "读取 dian115 配置的转存目标目录，转存位置沿用宿主配置"
+          },
+          {
+            "method": "GET",
+            "path": "/api/115/directories",
+            "reason": "浏览 115 账号目录，供手动指定转存位置"
+          },
+          {
+            "method": "GET",
+            "path": "/api/115/accounts/options",
+            "reason": "列出可用的 115 账号供转存时选择"
+          },
+          {
+            "method": "POST",
+            "path": "/api/115/share/receive",
+            "reason": "把搜索到的 115 分享链接转存入库"
+          }
+        ],
+        "network": [
+          {
+            "origin": "https://docs.qq.com",
+            "methods": [
+              "GET"
+            ],
+            "proxy_mode": "system",
+            "reason": "读取用户导入的腾讯在线文档内容，以及扫码登录后校验登录态"
+          },
+          {
+            "origin": "https://open.weixin.qq.com",
+            "methods": [
+              "GET"
+            ],
+            "proxy_mode": "system",
+            "reason": "获取腾讯文档扫码登录用的二维码"
+          },
+          {
+            "origin": "https://lp.open.weixin.qq.com",
+            "methods": [
+              "GET"
+            ],
+            "proxy_mode": "system",
+            "reason": "轮询扫码登录结果"
+          }
+        ]
+      },
+      "tags": [
+        "115",
+        "docs",
+        "search",
+        "transfer"
       ]
     }
   ]
