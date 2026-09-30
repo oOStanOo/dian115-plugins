@@ -6,7 +6,7 @@
     "name": "oOStanOo 插件仓库",
     "homepage": "https://github.com/oOStanOo/dian115-plugins"
   },
-  "generated_at": "2026-09-30T03:56:57Z",
+  "generated_at": "2026-09-30T04:15:57Z",
   "plugins": [
     {
       "id": "douban115",
@@ -114,13 +114,13 @@
     {
       "id": "doc115",
       "name": "文档资源库",
-      "version": "1.0.2",
+      "version": "1.0.3",
       "description": "导入在线文档（腾讯文档）建立索引，搜索其中的 115 资源并一键转存入库，转存位置沿用 dian115 宿主配置。",
       "author": "oOStanOo",
       "homepage": "https://github.com/oOStanOo/dian115-plugins",
       "icon_url": "assets/doc115.svg",
-      "package_url": "https://github.com/oOStanOo/dian115-plugins/releases/download/v1.0.2/doc115-1.0.2.d115p",
-      "sha256": "3e497399c9430238276c03a1092a0f0f025259c46a052683909a62479336b604",
+      "package_url": "https://github.com/oOStanOo/dian115-plugins/releases/download/v1.0.3/doc115-1.0.3.d115p",
+      "sha256": "a0af6b2b67bad74680d57d05c6e0fbecf469f07801d6a8ad9da415b569a21e52",
       "runtime": {
         "kind": "wasm",
         "protocol": "dian115:wasm@1",
@@ -148,6 +148,11 @@
             "method": "GET",
             "path": "/api/plugin-host/transfers/115/targets",
             "reason": "读取 dian115 配置的转存目标目录，转存位置沿用宿主配置"
+          },
+          {
+            "method": "POST",
+            "path": "/api/plugin-host/accounts/115/selections",
+            "reason": "创建有有效期的 115 账号选择引用，宿主读取转存目标时要求携带"
           },
           {
             "method": "GET",
