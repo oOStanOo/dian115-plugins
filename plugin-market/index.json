@@ -6,7 +6,7 @@
     "name": "oOStanOo 插件仓库",
     "homepage": "https://github.com/oOStanOo/dian115-plugins"
   },
-  "generated_at": "2026-09-30T07:00:37Z",
+  "generated_at": "2026-09-30T07:10:41Z",
   "plugins": [
     {
       "id": "douban115",
@@ -114,13 +114,13 @@
     {
       "id": "doc115",
       "name": "文档资源库",
-      "version": "1.0.22",
+      "version": "1.0.23",
       "description": "导入在线文档（腾讯文档）建立索引，搜索其中的 115 资源并一键转存入库，转存位置沿用 dian115 宿主配置。",
       "author": "oOStanOo",
       "homepage": "https://github.com/oOStanOo/dian115-plugins",
       "icon_url": "assets/doc115.svg",
-      "package_url": "https://github.com/oOStanOo/dian115-plugins/releases/download/v1.0.22/doc115-1.0.22.d115p",
-      "sha256": "359ba584a0a32da4cf22e5a65217aa6ef401c7a6068a0abaec91be9fca18cba5",
+      "package_url": "https://github.com/oOStanOo/dian115-plugins/releases/download/v1.0.23/doc115-1.0.23.d115p",
+      "sha256": "2c707e0e644e21b075f2d3bf9e57f9d5345ecae75ade3c98545be21b1f523864",
       "runtime": {
         "kind": "wasm",
         "protocol": "dian115:wasm@1",
