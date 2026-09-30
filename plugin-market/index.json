@@ -6,7 +6,7 @@
     "name": "oOStanOo 插件仓库",
     "homepage": "https://github.com/oOStanOo/dian115-plugins"
   },
-  "generated_at": "2026-09-30T04:45:33Z",
+  "generated_at": "2026-09-30T04:55:45Z",
   "plugins": [
     {
       "id": "douban115",
@@ -114,13 +114,13 @@
     {
       "id": "doc115",
       "name": "文档资源库",
-      "version": "1.0.8",
+      "version": "1.0.9",
       "description": "导入在线文档（腾讯文档）建立索引，搜索其中的 115 资源并一键转存入库，转存位置沿用 dian115 宿主配置。",
       "author": "oOStanOo",
       "homepage": "https://github.com/oOStanOo/dian115-plugins",
       "icon_url": "assets/doc115.svg",
-      "package_url": "https://github.com/oOStanOo/dian115-plugins/releases/download/v1.0.8/doc115-1.0.8.d115p",
-      "sha256": "892a463361004ef752d31ee2acb6a5b495e47d1c10eeba6a3c053dbdb64df34f",
+      "package_url": "https://github.com/oOStanOo/dian115-plugins/releases/download/v1.0.9/doc115-1.0.9.d115p",
+      "sha256": "c00943407e4787ae4c9432fb4b38b5f7c7520d6e15fae4a463f8190a0f666b84",
       "runtime": {
         "kind": "wasm",
         "protocol": "dian115:wasm@1",
@@ -171,18 +171,8 @@
           },
           {
             "method": "POST",
-            "path": "/api/plugin-host/transfers/115/share-receives",
-            "reason": "把搜索到的 115 分享链接转存到宿主配置的目标目录"
-          },
-          {
-            "method": "POST",
-            "path": "/api/plugin-host/transfers/115/targets",
-            "reason": "手动指定转存位置时，把 115 目录换成宿主可接受的转存目标引用"
-          },
-          {
-            "method": "POST",
             "path": "/api/115/share/receive",
-            "reason": "把搜索到的 115 分享链接转存入库"
+            "reason": "把搜索到的 115 分享链接转存入库；不带目标目录时落到宿主配置的默认目录"
           }
         ],
         "network": [
