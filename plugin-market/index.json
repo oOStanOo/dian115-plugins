@@ -6,18 +6,18 @@
     "name": "oOStanOo 插件仓库",
     "homepage": "https://github.com/oOStanOo/dian115-plugins"
   },
-  "generated_at": "2026-10-08T11:03:09Z",
+  "generated_at": "2026-10-08T11:32:34Z",
   "plugins": [
     {
       "id": "douban115",
       "name": "豆瓣订阅中心",
-      "version": "1.10.1",
+      "version": "1.10.2",
       "description": "自动将豆瓣榜单与「想看」列表加入 dian115 订阅，并同步 Emby 观影记录到豆瓣。",
       "author": "oOStanOo",
       "homepage": "https://github.com/oOStanOo/dian115-plugins",
       "icon_url": "assets/douban115.svg",
-      "package_url": "https://github.com/oOStanOo/dian115-plugins/releases/download/v1.10.1/douban115-1.10.1.d115p",
-      "sha256": "a32f71f774f9926f5c1e6bc1ca9913a87dc7f66fe0aa326501e507a666ee9367",
+      "package_url": "https://github.com/oOStanOo/dian115-plugins/releases/download/v1.10.2/douban115-1.10.2.d115p",
+      "sha256": "a7e04ad99fe97440847d634d0e27074f6c769c9ff231ecd1047c0e96e0130ba0",
       "runtime": {
         "kind": "wasm",
         "protocol": "dian115:wasm@1",
