@@ -46,6 +46,7 @@ shasum -a 256 douban115-<version>.d115p
 
 | 版本 | 文件 | SHA-256 |
 |---|---|---|
+| 1.10.0 | `douban115-1.10.0.d115p` | `f08167816e6a76aadb30692d498dbda11d120a22f4a02e39c4b419411b1f50ae` |
 | 1.9.0 | `douban115-1.9.0.d115p` | `386ec35ff135193384fb3dbc6eee17c3606a1afb066fce099ee0623a49958bb6` |
 | 1.8.1 | `douban115-1.8.1.d115p` | `d44089019f38b8c38d46874009c502d53499a7b58bd9f57fb0aac328048b7541` |
 | 1.8.0 | `douban115-1.8.0.d115p` | `1d67802d9bbdb997335164dabfb0ae97e4eeba2ed11ecaaca03a99da7c9e6058` |
