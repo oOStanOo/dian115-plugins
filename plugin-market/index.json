@@ -1,126 +1,43 @@
 {
-  "$schema": "./index.schema.json",
-  "schema_version": 1,
+  "schema_version": 3,
   "repository": {
     "id": "oOStanOo.dian115-plugins",
     "name": "oOStanOo 插件仓库",
     "homepage": "https://github.com/oOStanOo/dian115-plugins"
   },
-  "generated_at": "2026-10-12T08:34:34Z",
   "plugins": [
     {
       "id": "douban115",
-      "name": "豆瓣订阅中心",
-      "version": "1.14.0",
-      "description": "自动将豆瓣榜单与「想看」列表加入 dian115 订阅，并同步 Emby 观影记录到豆瓣。",
+      "name": "豆瓣榜单订阅",
+      "version": "2.0.1",
+      "description": "按豆瓣/BangumiTV 榜单与豆瓣想看自动订阅影视条目，经 TMDB 识别后交给宿主的聚合订阅；可把 Emby 里已看的条目在豆瓣标记看过。",
       "author": "oOStanOo",
       "homepage": "https://github.com/oOStanOo/dian115-plugins",
-      "icon_url": "assets/douban115.svg",
-      "package_url": "https://github.com/oOStanOo/dian115-plugins/releases/download/v1.14.0/douban115-1.14.0.d115p",
-      "sha256": "ff6d809ba1d71f5ee04426eab8a979748f881417b734dc694eb364bda0e4317c",
-      "runtime": {
-        "kind": "wasm",
-        "protocol": "dian115:wasm@1",
-        "autostart": true,
-        "trust_level": "wasm-sandbox"
-      },
-      "permissions": {
-        "apis": [
-          {
-            "method": "GET",
-            "path": "/api/tmdb/search",
-            "reason": "按豆瓣榜单/想看条目标题搜索 TMDB 以解析媒体身份"
-          },
-          {
-            "method": "GET",
-            "path": "/api/tmdb/movie/:id",
-            "reason": "读取电影详情用于匹配豆瓣条目"
-          },
-          {
-            "method": "GET",
-            "path": "/api/tmdb/tv/:id",
-            "reason": "读取剧集详情用于匹配豆瓣条目"
-          },
-          {
-            "method": "GET",
-            "path": "/api/subscribe/pool/intents",
-            "reason": "查询现有订阅用于去重"
-          },
-          {
-            "method": "POST",
-            "path": "/api/subscribe/pool/intents",
-            "reason": "把豆瓣榜单/想看条目创建为聚合订阅"
-          },
-          {
-            "method": "GET",
-            "path": "/api/plugin-runtime/storage/:key",
-            "reason": "读取插件自己的配置与历史数据"
-          },
-          {
-            "method": "PUT",
-            "path": "/api/plugin-runtime/storage/:key",
-            "reason": "保存插件自己的配置与历史数据"
-          }
+      "source_url": "https://github.com/oOStanOo/dian115-plugins/releases/download/v2.0.1/douban115-2.0.1.dian115p",
+      "sha256": "12258753a0f6a7b67674241df68454bf936d70193d51c1760b4eea28bbe5b52b",
+      "delivery": "source",
+      "changelog": "按 dian115 插件 API v3 重写：容器改为 .dian115p，废弃 WASM 运行时，改为后台 JS + 宿主接口（TMDB/订阅池/存储全部走宿主）。功能对齐 v1.14.0，并修复整榜拉取失败时界面无提示的问题。",
+      "declared_usage": {
+        "purpose": "按豆瓣/BangumiTV 榜单与豆瓣想看自动订阅影视条目；可选把 Emby 已看条目在豆瓣标记看过",
+        "sites": [
+          "用户在设置里填写的 RSSHub 实例（默认 rsshub.ddsrem.com）",
+          "movie.douban.com、www.douban.com、m.douban.com（读榜单与想看，写观看状态）",
+          "api.bgm.tv、bgm.tv（BangumiTV 榜补官方评分）",
+          "用户在设置里填写的 Emby 地址（只读已播放条目）",
+          "image.tmdb.org（封面图）、www.themoviedb.org（页面里的详情外链，由用户点击才访问）"
         ],
-        "network": [
-          {
-            "origin": "https://rsshub.ddsrem.com",
-            "methods": [
-              "GET"
-            ],
-            "proxy_mode": "system",
-            "reason": "读取豆瓣榜单 RSS 数据"
-          },
-          {
-            "origin": "https://www.douban.com",
-            "methods": [
-              "GET",
-              "POST"
-            ],
-            "proxy_mode": "system",
-            "reason": "读取豆瓣搜索与想看动态"
-          },
-          {
-            "origin": "https://movie.douban.com",
-            "methods": [
-              "GET",
-              "POST"
-            ],
-            "proxy_mode": "system",
-            "reason": "读取豆瓣想看列表并回写观看状态"
-          },
-          {
-            "origin": "https://m.douban.com",
-            "methods": [
-              "GET"
-            ],
-            "proxy_mode": "system",
-            "reason": "读取豆瓣移动页条目信息，并在标题匹配失败时取条目的原名/又名用于重新匹配 TMDB"
-          },
-          {
-            "origin": "https://api.bgm.tv",
-            "methods": [
-              "GET"
-            ],
-            "proxy_mode": "system",
-            "reason": "读取 BangumiTV 条目的官方评分（该榜单 RSS 只给关注人数，没有评分）"
-          },
-          {
-            "origin": "https://bgm.tv",
-            "methods": [
-              "GET"
-            ],
-            "proxy_mode": "system",
-            "reason": "官方 API 不可达时，从 BangumiTV 条目页读取评分"
-          }
-        ]
-      },
-      "tags": [
-        "douban",
-        "emby",
-        "subscribe",
-        "automation"
-      ]
+        "apis": [
+          "GET /api/tmdb/search",
+          "GET /api/tmdb/movie/{id}",
+          "GET /api/tmdb/tv/{id}",
+          "GET /api/subscribe/pool/intents",
+          "POST /api/subscribe/pool/intents"
+        ],
+        "files": [],
+        "cookiecloud": "经宿主已启用的本地 CookieCloud 读取豆瓣域名的 Cookie（不读取 115 相关域名），用于豆瓣想看与标记看过",
+        "notifications": "仅在用户开启通知且本轮有新增订阅或标记时发送",
+        "risk": "读写插件自己的配置与历史；会创建宿主聚合订阅；开启观影同步后会在豆瓣标记「看过」；不读写宿主文件，不读取 115 相关 Cookie"
+      }
     }
   ]
 }
