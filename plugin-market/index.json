@@ -9,14 +9,14 @@
     {
       "id": "douban115",
       "name": "豆瓣榜单订阅",
-      "version": "2.0.4",
+      "version": "2.0.5",
       "description": "按豆瓣/BangumiTV 榜单与豆瓣想看自动订阅影视条目，经 TMDB 识别后交给宿主的聚合订阅；可把 Emby 里已看的条目在豆瓣标记看过。",
       "author": "oOStanOo",
       "homepage": "https://github.com/oOStanOo/dian115-plugins",
-      "source_url": "https://github.com/oOStanOo/dian115-plugins/releases/download/v2.0.4/douban115-2.0.4.dian115p",
-      "sha256": "cba1c224a63dd1ab6e1ab08b23cd4287d2c26679bfad796f069e837d1ab88fbb",
+      "source_url": "https://github.com/oOStanOo/dian115-plugins/releases/download/v2.0.5/douban115-2.0.5.dian115p",
+      "sha256": "d60f920bdcb91e6f6ff8e60d84b5f6de49b79c1a88db5f842333ce2290782c3c",
       "delivery": "source",
-      "changelog": "导入/导出配置回归：导出无存储配置时回退默认配置（不再导出 null），导入经 sanitizeConfig 归一化，全字段闭环验证通过。",
+      "changelog": "仪表盘快照布局改造：榜单卡片按设置顺序排列；年份/评分来源/评分/订阅状态固定列对齐；左侧只显示标题且可左右滚动；hover 三个操作按钮固定在最右侧，不再覆盖模糊整行。",
       "declared_usage": {
         "purpose": "按豆瓣/BangumiTV 榜单与豆瓣想看自动订阅影视条目；可选把 Emby 已看条目在豆瓣标记看过",
         "sites": [
