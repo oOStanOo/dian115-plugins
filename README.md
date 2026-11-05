@@ -11,6 +11,7 @@
 - 运行时：插件 API v3 —— 后台 JavaScript + 宿主接口（不再使用 WASM）
 - 兼容宿主：dian115 `>=5.0.0`（在 5.0.60 上完成验证）；dian115 4.x 请留在 1.14.0 的 `.d115p`
 - 本仓库只发布**插件包**（`.dian115p`），不包含私钥
+- 交付格式：**`protected-v4` 编译签名包**（dian115 5.0.69 起，新正式安装与更新强制要求），由宿主本地「编译 MCP」签发；源码包只允许管理员作本机调试导入
 
 > 2.0.0 起插件随 dian115 改版重写：容器从 `.d115p`（WASM）换成 `.dian115p`（后台 JS）。
 > TMDB、订阅池、存储全部改走宿主接口，不再需要插件侧密钥。
@@ -39,7 +40,8 @@
 
    宿主会读取该索引并列出可安装插件；发新版后点「刷新市场」再点插件的「更新」即可原地升级。
 
-2. **手动导入**：从 [Releases](https://github.com/oOStanOo/dian115-plugins/releases) 下载 `.dian115p`，在插件中心 → 第三方插件 → 安装 `.dian115p` 插件。
+2. **手动安装/更新**：从 [Releases](https://github.com/oOStanOo/dian115-plugins/releases) 下载 **带 release_id 文件名的正式包**，在插件中心 → 用户插件 → 卡片「管理」→ 手动更新（上传文件或填下载地址）。
+   注意：源码调试包（如 `douban115-2.0.5.dian115p`）只能由管理员导入作本机调试，不能覆盖正式安装，商店/URL 更新会被宿主拒绝。
 
 ### 校验
 
@@ -53,7 +55,7 @@ shasum -a 256 douban115-<version>.dian115p
 
 | 版本 | 文件 | SHA-256 |
 |---|---|---|
-| **2.0.5** | `douban115-2.0.5.dian115p` | `d60f920bdcb91e6f6ff8e60d84b5f6de49b79c1a88db5f842333ce2290782c3c` |
+| **2.0.5** | `douban115-34d544f7-3c06-493a-8658-27dca2f1ee8b.dian115p` | `c013a6481390e768c66967059b26919e908b161d7b687c9d2bea9b7f5536c18b` |
 | 2.0.4 | `douban115-2.0.4.dian115p` | `cba1c224a63dd1ab6e1ab08b23cd4287d2c26679bfad796f069e837d1ab88fbb` |
 | 2.0.3 | `douban115-2.0.3.dian115p` | `7e37ba7daf049a92efdced53e5e1d788247659c2f2fc115c406d721bebad75de` |
 | 2.0.2 | `douban115-2.0.2.dian115p` | `56e89497834fe43eb2c784429c02439fe1676702176020050d7474e6bf831dd3` |
