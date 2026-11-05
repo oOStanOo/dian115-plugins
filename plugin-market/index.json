@@ -9,14 +9,14 @@
     {
       "id": "douban115",
       "name": "豆瓣榜单订阅",
-      "version": "2.0.6",
+      "version": "2.0.7",
       "description": "按豆瓣/BangumiTV 榜单与豆瓣想看自动订阅影视条目，经 TMDB 识别后交给宿主的聚合订阅；可把 Emby 里已看的条目在豆瓣标记看过。",
       "author": "oOStanOo",
       "homepage": "https://github.com/oOStanOo/dian115-plugins",
-      "source_url": "https://github.com/oOStanOo/dian115-plugins/releases/download/v2.0.6/douban115-f7fe4342-4154-4b42-a2ce-07d985331a95.dian115p",
-      "sha256": "b43919e5b496bb59842a8486ac1bec8fdb3587e06893b36ba875cf2e23b6d89d",
+      "source_url": "https://github.com/oOStanOo/dian115-plugins/releases/download/v2.0.7/douban115-0450a393-3866-43c7-a1f5-fc7e5fbb5ca4.dian115p",
+      "sha256": "599c9e06dbbb354db391efbdeda79246c5156a4fe15ab35afcce04142c184546",
       "delivery": "protected-v4",
-      "changelog": "修复 2.0.5 正式包 UI 资源路径问题（ui/ 目录外 import 导致 404），并完成仪表盘快照布局改造：榜单按设置顺序、各列对齐、标题可滚动、操作按钮固定最右。",
+      "changelog": "修复仪表盘快照行 hover 操作按钮因 opacity 过渡在插件 iframe 不推进而不可见：去掉 transition，hover 立即显示；其余同 2.0.6（榜单按设置顺序、7 列对齐、标题可横向滚动、操作按钮固定最右）。",
       "declared_usage": {
         "purpose": "按豆瓣/BangumiTV 榜单与豆瓣想看自动订阅影视条目；可选把 Emby 已看条目在豆瓣标记看过",
         "sites": [
