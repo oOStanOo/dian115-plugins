@@ -9,14 +9,14 @@
     {
       "id": "douban115",
       "name": "豆瓣榜单订阅",
-      "version": "2.0.7",
+      "version": "2.0.8",
       "description": "按豆瓣/BangumiTV 榜单与豆瓣想看自动订阅影视条目，经 TMDB 识别后交给宿主的聚合订阅；可把 Emby 里已看的条目在豆瓣标记看过。",
       "author": "oOStanOo",
       "homepage": "https://github.com/oOStanOo/dian115-plugins",
-      "source_url": "https://github.com/oOStanOo/dian115-plugins/releases/download/v2.0.7/douban115-0450a393-3866-43c7-a1f5-fc7e5fbb5ca4.dian115p",
-      "sha256": "599c9e06dbbb354db391efbdeda79246c5156a4fe15ab35afcce04142c184546",
+      "source_url": "https://github.com/oOStanOo/dian115-plugins/releases/download/v2.0.8/douban115-d2ecee67-cba5-4062-9c8a-155b2cd988c8.dian115p",
+      "sha256": "b81a4d7077662cb7fc410ea32ed3fcece4c4ad7820406ceb79c4076ab1ffe929",
       "delivery": "protected-v4",
-      "changelog": "修复仪表盘快照行 hover 操作按钮因 opacity 过渡在插件 iframe 不推进而不可见：去掉 transition，hover 立即显示；其余同 2.0.6（榜单按设置顺序、7 列对齐、标题可横向滚动、操作按钮固定最右）。",
+      "changelog": "快照行交互调整：常态下年份/豆瓣·TMDB/评分/订阅状态四列靠右贴齐且操作区不占位；悬停时隐藏名次与四列信息，只保留标题(左)和添加到订阅/在TMDB打开/在豆瓣打开三个按钮(右)，标题仍可左右滚动。",
       "declared_usage": {
         "purpose": "按豆瓣/BangumiTV 榜单与豆瓣想看自动订阅影视条目；可选把 Emby 已看条目在豆瓣标记看过",
         "sites": [
