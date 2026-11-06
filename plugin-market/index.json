@@ -9,14 +9,14 @@
     {
       "id": "douban115",
       "name": "豆瓣榜单订阅",
-      "version": "2.0.9",
+      "version": "2.0.10",
       "description": "按豆瓣/BangumiTV 榜单与豆瓣想看自动订阅影视条目，经 TMDB 识别后交给宿主的聚合订阅；可把 Emby 里已看的条目在豆瓣标记看过。",
       "author": "oOStanOo",
       "homepage": "https://github.com/oOStanOo/dian115-plugins",
-      "source_url": "https://github.com/oOStanOo/dian115-plugins/releases/download/v2.0.9/douban115-f33c43bd-5f8d-4307-8a3e-5cf1856ae2b6.dian115p",
-      "sha256": "c5e04cda17051a39a74a24ca4532dc4fb331f9fa42ec3c08feb2623c3f3efe4d",
+      "source_url": "https://github.com/oOStanOo/dian115-plugins/releases/download/v2.0.10/douban115-75ab7d42-8232-4aa5-9cd2-4f3886e533e8.dian115p",
+      "sha256": "ddb2e2c7d81db1a075b53076ae205f4b3ceed04908fad083a1b14d586de46fb0",
       "delivery": "protected-v4",
-      "changelog": "快照行修复：订阅状态列加宽到 76px 并去掉省略号截断，「订阅池已有」「超出订阅数」等文案完整显示；行高锁定 36px、标题块 22px，常态与悬停/展开/聚焦两态行高不再抖动（超长标题仍可左右滚动）。",
+      "changelog": "快照行精简：去掉年份后的豆瓣/TMDB/BGM 评分来源标识（常态改 5 列）；订阅状态「订阅池已有」改为「已订阅」、「超出订阅数」不再显示标签；超长标题改为省略截断、不再出现横向滚动条；36px 固定行高与状态文案完整显示保持不变。",
       "declared_usage": {
         "purpose": "按豆瓣/BangumiTV 榜单与豆瓣想看自动订阅影视条目；可选把 Emby 已看条目在豆瓣标记看过",
         "sites": [
